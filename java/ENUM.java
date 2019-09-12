@@ -89,7 +89,10 @@ public class ENUM {
         Map<Integer,weeknode> weeknodes=new HashMap<>();
         System.out.println(list.stream().peek(weeknode->weeknodes.put(weeknode.getId(),weeknode)).count()); //7
 
-
+        for(Map.Entry<Integer,weeknode> w: weeknodes.entrySet())
+        {
+            System.out.print(w.getValue().getName()+" ");//星期0 星期1 星期2 星期3 星期5 星期6
+        }
 
     }
 }
