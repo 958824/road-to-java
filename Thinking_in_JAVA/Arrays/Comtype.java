@@ -37,7 +37,13 @@ public class Comtype implements Comparable<Comtype> {
         Comtype[] a=Generated.array(new Comtype[12],generator());
         System.out.println("before sorting");
         System.out.println(Arrays.toString(a));
-        Arrays.sort(a);
+        //Arrays.sort(a);
+        Arrays.sort(a, new Comparator<Comtype>() {
+            @Override
+            public int compare(Comtype o1, Comtype o2) {
+                return o1.i-o2.i;
+            }
+        });
         System.out.println("After sorting");
         System.out.println(Arrays.toString(a));
     }
